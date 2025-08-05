@@ -38,3 +38,11 @@ pluginManagement {
 }
 ```
 这google部分代码，加了之后，可以避免repo.maven.apache.org从这个地址下载，这个地址下载很慢，第一次同步项目很慢很慢。待后续继续评估。
+
+## SDK下载快
+
+可能跟这个有关系
+
+```http proxy
+https://mirrors.cloud.tencent.com/AndroidSDK/
+```
