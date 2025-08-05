@@ -16,3 +16,25 @@ distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-8.6-bin.zip
 Gradle的下载慢的问题大多能通过这个解决
 
 ## Maven仓库下载慢的问题
+
+```groovy
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        // 国内镜像优先
+        maven {
+            name "AliyunGradlePlugin"
+            url "https://maven.aliyun.com/repository/gradle-plugin"
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+```
+这google部分代码，加了之后，可以避免repo.maven.apache.org从这个地址下载，这个地址下载很慢，第一次同步项目很慢很慢。待后续继续评估。
