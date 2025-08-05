@@ -46,3 +46,9 @@ pluginManagement {
 ```http proxy
 https://mirrors.cloud.tencent.com/AndroidSDK/
 ```
+
+## VPN
+
+使用openvpn，可以在Android Studio完成验证登录Google账号和Gemini，用pac则不行
+
+后续还可以尝试自己设置本地代理，看看能不能加速一下代码依赖下载
